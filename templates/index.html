@@ -4,48 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PMI Prediction</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div id="branding">
-                <h1>PMI Prediction</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="main">
-        <div class="container">
-            <form action="/predict" method="post">
-                <label for="Max">Max Temperature:</label>
-                <input type="text" id="Max" name="Max"><br>
-
-                <label for="Min">Min Temperature:</label>
-                <input type="text" id="Min" name="Min"><br>
-
-                <label for="Average">Average Temperature:</label>
-                <input type="text" id="Average" name="Average"><br>
-
-                <label for="Ambient">Ambient Temperature:</label>
-                <input type="text" id="Ambient" name="Ambient"><br>
-
-                <label for="Humidity">Humidity:</label>
-                <input type="text" id="Humidity" name="Humidity"><br>
-
-                <input type="submit" value="Predict">
-            </form>
-            <h2 id="result"></h2>
-        </div>
-    </section>
-
+    <h1>Predict PMI Using Thermal Imaging Data</h1>
+    <form action="/predict" method="post">
+        <label for="Max">Max Temperature:</label>
+        <input type="text" id="Max" name="Max"><br><br>
+        <label for="Min">Min Temperature:</label>
+        <input type="text" id="Min" name="Min"><br><br>
+        <label for="Average">Average Temperature:</label>
+        <input type="text" id="Average" name="Average"><br><br>
+        <label for="Ambient">Ambient Temperature:</label>
+        <input type="text" id="Ambient" name="Ambient"><br><br>
+        <label for="Humidity">Humidity:</label>
+        <input type="text" id="Humidity" name="Humidity"><br><br>
+        <input type="submit" value="Predict">
+    </form>
+    <h2 id="result"></h2>
     <script>
         document.querySelector('form').onsubmit = async function(event) {
             event.preventDefault();
